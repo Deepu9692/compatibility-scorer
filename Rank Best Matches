@@ -1,0 +1,15 @@
+results = []  # To store the scores between each pair
+
+  for i in range(len(profiles)):
+      for j in range(i + 1, len(profiles)):
+          profile1 = profiles.iloc[i]
+          profile2 = profiles.iloc[j]
+          score = compatibility_score(profile1, profile2)
+          results.append((profile1['Name'], profile2['Name'], score))
+
+  # Sort results by compatibility score in descending order
+  ranked_results = sorted(results, key=lambda x: x[2], reverse=True)
+
+  # Display ranked matches
+  for result in ranked_results:
+      print(f"Match: {result[0]} & {result[1]} | Score: {result[2]}")
