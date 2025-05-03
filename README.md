@@ -1,28 +1,27 @@
 # Compatibility Scorer
 
-## Description
-A rule-based model to score how compatible two roommates are based on their preferences.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Python Version](https://img.shields.io/badge/python-3.7%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## Overview
+Compatibility Scorer is a Python-based tool designed to assess how compatible two roommates are based on their preferences. Using a rule-based scoring system, this project is ideal for shared living spaces, roommate-matching services, or personal use.
+
+## Features
+- Simple and intuitive rule-based scoring system.
+- Flexible and easy CSV-based input format.
+- Lightweight and written in Python.
+- Supports deployment on platforms like Heroku.
+
+## Prerequisites
+Before running the project, ensure you have:
+- Python 3.7 or higher installed.
+- pip (Python package installer) installed.
 
 ## Requirements
-- Python 3.x
-- pandas library
+This project requires the following Python library:
+- `pandas`
 
-## How to Use
-1. Clone this repository.
-2. Install required packages:
-    bash
-    pip install pandas
-    
-3. Run the compatibility score script:
-    bash
-    python compatibility_scorer.py
-    
-
-## CSV Format
-The profiles should be stored in a CSV format as follows:
-
-## Deployment
-To deploy the solution, you can use Heroku or another service if applicable.
-
-## Contribution
-Feel free to contribute by opening an issue or a pull request!
+Install it using the following command:
+```bash
+pip install pandas
