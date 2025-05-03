@@ -1,0 +1,26 @@
+import pandas as pd
+
+  # Load the profiles from CSV
+  profiles = pd.read_csv('profiles.csv')
+
+  def compatibility_score(profile1, profile2):
+      score = 0
+      # Sleep Time Compatibility
+      if abs(profile1['SleepTime'] - profile2['SleepTime']) <= 1:
+          score += 25
+      # Cleanliness Compatibility
+      if profile1['Cleanliness'] == profile2['Cleanliness']:
+          score += 25
+      # Work Schedule Compatibility
+      if abs(profile1['WorkSchedule'] - profile2['WorkSchedule']) <= 1:
+          score += 25
+      # Food Habits Compatibility
+      if profile1['FoodHabits'] == profile2['FoodHabits']:
+          score += 25
+      return score
+
+  # Example to compare two profiles
+  alice = profiles.iloc[0]
+  bob = profiles.iloc[1]
+  score = compatibility_score(alice, bob)
+  print(f"Compatibility Score between Alice and Bob: {score}")
